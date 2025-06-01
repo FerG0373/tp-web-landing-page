@@ -1,0 +1,43 @@
+:root {
+    --color-texto: #060A24;
+    --color-subtitulos: #ffffff;    
+
+    --color-primario: #0000FF;
+    --color-secundario: #0000A3;
+
+    --fuente-titulo: "IBM Plex Sans", sans-serif;
+    --fuente-texto: "IBM Plex Mono", monospace;
+    --fuente-enlace: "IBM Plex Mono-Medium", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+body {
+    box-sizing: border-box;
+}
+
+
+.header {
+    display: flex;
+    width: 100%;
+    margin: 0.7% 6.9%
+}
+
+
+.header__logo {
+    height: 36px;
+    width: 36px;
+}
+
+
+.header__menu {
+    font-family: var(--fuente-texto);
+    color: var(--color-texto);
+    font-size: 16px;
+    word-spacing: 28px;
+}
