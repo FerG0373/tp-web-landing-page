@@ -131,12 +131,28 @@ a {
 }
 
 
-.section-dos {
-    background-image: linear-gradient(to right, var(--color-secundario), var(--color-primario));
-    /* padding: 100px 200px 10px 300px; */
+.section-dos {    
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 30px;
+    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;    
+    position: relative;    
+}
+
+
+.section-dos::before {
+    background-image: linear-gradient(to right, var(--color-secundario), var(--color-primario));
+    content: "";
+    position: absolute;
+    top: -25px; /* Ajusta para que cubra la parte superior */
+    left: -70px; /* Ajusta para que cubra la parte izquierda */
+    width: 120%; /* Ajusta el ancho para cubrir los lados rotados */
+    height: 120%; /* Ajusta la altura para cubrir los lados rotados */
+    background-image: linear-gradient(to right, var(--color-secundario), var(--color-primario));
+    transform: rotate(-7deg);
+    z-index: -1; /* Coloca el fondo detrás del contenido */
 }
 
 
@@ -144,17 +160,24 @@ a {
     font-family: var(--fuente-titulo);
     font-size: 3rem;
     color: var(--color-subtitulos);
-    width: 209px;
-    height: 62px; 
-    padding: 100px 200px 10px 300px;  
+    width: fit-content;
+    padding-left: 300px;
+    padding-top: 20px;
 }
 
 
 .section-dos__imagenes {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 80px;
+    padding-left: 70px;
+    padding-right: 70px;
+    gap: 50px;
+    z-index: 1; /* Asegura que esté encima del fondo */
+}
+
+.section-dos__imagenes__imagen {
+    width: 100%;
+    height: auto;
 }
 
 
