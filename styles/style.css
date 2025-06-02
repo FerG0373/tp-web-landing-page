@@ -50,9 +50,20 @@ a {
 
 .header__nav {
     font-family: var(--fuente-texto);
-    color: var(--color-texto);
     font-size: 1rem;
     word-spacing: 28px;
+}
+
+
+.header__nav__link:hover {
+    color: var(--color-terciario);
+    text-decoration: line-through;
+}
+
+
+.header__nav__link:active {
+    color: #838592;
+    text-decoration: line-through;
 }
 
 
@@ -96,17 +107,27 @@ a {
 
 .section-uno__enlaces {
     display: flex;
+    width: 226px;
+    height: 56px;
 }
 
 
 .section-uno__enlaces__link {
     font-family: var(--fuente-enlace);
     font-size: 1.125rem;
-    width: 226px;
-    
+    font-weight: bold;
+    width: 226px;    
     background-color: var(--color-terciario);
+    align-content: center;
     text-align: center;
     padding: 1.4% 0;
+}
+
+
+.section-uno__enlaces__link:hover {
+    color: #ffffff;
+    background-color: var(--color-terciario);
+    background-image: linear-gradient(to right, var(--color-terciario), var(--color-primario));
 }
 
 
