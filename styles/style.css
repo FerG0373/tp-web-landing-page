@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
     --color-texto: #060A24;
     --color-subtitulos: #ffffff;    
 
     --color-primario: #0000FF;
     --color-secundario: #0000A3;
+    --color-terciario: #00F3BB;
 
     --fuente-titulo: "IBM Plex Sans", sans-serif;
     --fuente-texto: "IBM Plex Mono", monospace;
     --fuente-enlace: "IBM Plex Mono-Medium", monospace;
 }
+
 
 * {
     margin: 0;
@@ -19,13 +24,21 @@
 
 body {
     box-sizing: border-box;
+    color: var(--color-texto);
+}
+
+
+a {
+    color: var(--color-texto)
 }
 
 
 .header {
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    margin: 0.7% 6.9%
+    height: 2%;
+    margin: 2% 4%;
 }
 
 
@@ -35,9 +48,80 @@ body {
 }
 
 
-.header__menu {
+.header__nav {
     font-family: var(--fuente-texto);
     color: var(--color-texto);
     font-size: 16px;
-    word-spacing: 28px;
+}
+
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.presentacion__contenido {
+    margin: 5%;
+    padding-left: 5%;
+}
+
+
+.presentacion__contenido__titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 4rem;
+    color: var(--color-texto);
+    margin-bottom: 1rem;
+}
+
+
+.titulo-world {
+    width: 50.2%;
+    text-decoration: line-through;
+}
+
+
+.titulo-punto {
+    color: var(--color-primario);
+}
+
+
+.presentacion__contenido__texto {
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    width: 43.6%;
+}
+
+
+.presentacion__enlaces {
+    display: flex;
+}
+
+
+.presentacion__enlaces__link {
+    font-family: var(--fuente-enlace);
+    font-size: 1.125rem;
+    width: 226px;
+    
+    background-color: var(--color-terciario);
+    text-align: center;
+    padding: 1.4% 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+    width: 18px;
+    height: 28px;
 }
