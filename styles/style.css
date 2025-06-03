@@ -106,7 +106,7 @@ a {
     font-family: var(--fuente-texto);
     font-size: 1rem;
     margin-bottom: 2rem;
-    width: 43.6%;
+    width: 50%;
     padding-bottom: 40px;
 }
 
@@ -204,13 +204,14 @@ a {
 
 .section-tres__subtitulo {
     font-family: var(--fuente-titulo);
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: normal;
 }
 
 
 .section-tres__subtitulo__parrafo {
     font-family: var(--fuente-texto);
+    font-size: 1rem;
     width: 80%;
 }
 
@@ -230,7 +231,7 @@ a {
 
 .section-cuatro__subtitulo {
     font-family: var(--fuente-titulo);
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: normal;
     padding: 90px 0 50px 300px;
 }
@@ -245,6 +246,31 @@ a {
 
 
 
+.section-cinto {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.section-cinco__subtitulo {
+    font-family: var(--fuente-titulo);
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+
+.section-cinco__temas {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.section-cinco__temas__parrafo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: semi-bold;
+    width: 15.3%;
+}
 
 
 
