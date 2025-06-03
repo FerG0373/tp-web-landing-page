@@ -84,6 +84,7 @@ a {
 .section-uno__titulo {
     font-family: var(--fuente-titulo);
     font-size: 4rem;
+    font-weight: normal;
     color: var(--color-texto);
     margin-bottom: 1rem;
     padding-top: 60px;
@@ -161,6 +162,7 @@ a {
 .section-dos__subtitulo {
     font-family: var(--fuente-titulo);
     font-size: 3rem;
+    font-weight: normal;
     color: var(--color-subtitulos);
     width: fit-content;    
     padding-top: 20px;
@@ -187,6 +189,7 @@ a {
     flex-direction: row-reverse;
     padding-top: 30px;
     justify-content: center;
+    gap: 70px;
 }
 
 
@@ -202,11 +205,13 @@ a {
 .section-tres__subtitulo {
     font-family: var(--fuente-titulo);
     font-size: 48px;
+    font-weight: normal;
 }
 
 
 .section-tres__subtitulo__parrafo {
     font-family: var(--fuente-texto);
+    width: 80%;
 }
 
 
@@ -226,6 +231,8 @@ a {
 .section-cuatro__subtitulo {
     font-family: var(--fuente-titulo);
     font-size: 48px;
+    font-weight: normal;
+    padding: 90px 0 50px 300px;
 }
 
 
