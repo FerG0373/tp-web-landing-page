@@ -206,6 +206,12 @@ a {
 }
 
 
+.section-dos__imagenes__imagen {
+    width: 36.5rem;
+    height: auto;
+}
+
+
 .section-tres {
     display: flex;
     flex-direction: row-reverse;
@@ -418,10 +424,8 @@ a {
 @media (max-width: 1210px) {
 
     .header {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-
+        padding: 5%;
+        justify-content: center;
     }
 
     .header__nav {
@@ -430,11 +434,122 @@ a {
 
     .header__boton-hamburguesa {
         display: block;
-        cursor: pointer;
     }
 
     .header__boton-hamburguesa__icono {
-        width: 100%;
+        
     }
+
+    .section-uno {
+        width: auto;
+        padding: 5%;
+    }
+
+    .section-uno__titulo {
+        width: auto;
+        font-size: 3rem;
+    }
+
+    .section-uno__texto {
+        width: auto;
+    }
+
+    .section-uno__enlaces {
+        justify-content: center;
+        padding-left: 0;
+        width: auto;
+    }
+
+    .section-uno__enlaces__link {
+        width: 90%;
+    }
+
+    .section-dos {
+        width: auto;
+    }
+
+    .section-dos__subtitulo {
+        text-align: center;
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .section-dos__imagenes {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section-dos__imagenes__imagen {
+        width: 18.625rem;
+        height: 14.0625rem;
+    }
+
+    .section-tres {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: auto;
+    }
+
+    .section-tres__texto {
+        width: auto;
+    }
+
+    .section-tres__subtitulo {
+        font-size: 3rem;
+    }
+
+    .section-tres__subtitulo__parrafo {
+        width: auto;
+    }
+
+    .section-cuatro {
+        width: auto;
+    }
+
+    .section-cuatro__subtitulo {
+        align-items: center;
+    }
+
+    .section-cuatro__imagenes {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .section-cinco {
+        width: auto;
+    }
+
+
+    .section-seis {
+        width: auto;
+    }
+
+    .section-seis__subtitulo {
+        width: auto;
+    }
+
+    .section-cinco__temas {
+        flex-direction: column;
+    }
+
+    .footer {
+        width: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer__texto {
+        width: auto;
+    }
+
+    .footer__logos {
+        align-items: center;
+    }
+
+    .footer__logos__logo {
+        width: 16px;
+        height: 28px;
+    } 
 
 }
