@@ -54,8 +54,8 @@ a {
 
 
 .header__logo-bd {
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     display: inline-flex;
     border-radius: 50%;
     background-image: linear-gradient(to right, var(--color-primario), var(--color-secundario));
@@ -76,6 +76,21 @@ a {
 .header__nav__link:active {
     color: var(--color-enlances-active);
     text-decoration: line-through;
+}
+
+
+.header__boton-hamburguesa {
+    background: none;
+    border: none;
+    display: none;
+    /* cursor: pointer; */
+}
+
+
+.header__boton-hamburguesa__icono {
+    width: 18px;
+    height: auto;
+    display: block;
 }
 
 
@@ -397,3 +412,29 @@ a {
     height: 1.75rem;
 }
 
+
+
+
+@media (max-width: 1210px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__boton-hamburguesa {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header__boton-hamburguesa__icono {
+        width: 100%;
+    }
+
+}
