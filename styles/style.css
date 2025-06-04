@@ -53,9 +53,17 @@ a {
 }
 
 
-.header__logo {
-    height: 36px;
+.header__logo-bd {
     width: 36px;
+    height: 36px;
+    display: inline-flex;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, var(--color-primario), var(--color-secundario));
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente-titulo);
+    font-size: 1rem;
 }
 
 
