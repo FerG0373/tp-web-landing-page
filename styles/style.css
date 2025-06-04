@@ -32,10 +32,8 @@ html {
 
 
 body {
-    min-height: 100vh;
     color: var(--color-texto);
-    width: 100%;
-    overflow-x: hidden;
+    height: 100vh;
 }
 
 
@@ -47,21 +45,17 @@ a {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 28px 100px 16px 100px;
+    padding: 1.875rem 20rem 1.875rem 20rem;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    word-spacing: 2rem;
+    width: 100%;
 }
 
 
 .header__logo {
     height: 36px;
     width: 36px;
-}
-
-
-.header__nav {
-    font-family: var(--fuente-texto);
-    font-size: 1rem;
-    word-spacing: 1.75rem;
 }
 
 
@@ -81,12 +75,14 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 
 
 .section-uno {
-    padding: 6.25rem 12.5rem 0.625rem 6.25rem;
+    display: flex;
+    flex-direction: column;
+    width: 90rem;
+    padding-left: 12.5rem;
 }
 
 
@@ -101,7 +97,6 @@ a {
 
 
 .titulo-world {
-    /* width: 50%; */
     text-decoration: line-through;
 }
 
@@ -145,13 +140,14 @@ a {
 
 
 .section-dos {    
+    width: 90rem;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
-    margin-top: 7.8125rem;
-    padding-top: 9.375rem;
-    padding-bottom: 3.75rem;
+    gap: 4.5rem;
     position: relative;
+    overflow: hidden;
+    padding-top: 6.25rem;
+    padding-left: 4.6875rem;
 }
 
 
@@ -159,10 +155,10 @@ a {
     content: "";
     background-image: linear-gradient(to right, var(--color-secundario), var(--color-primario));
     position: absolute;
-    top: 0.9375rem;
-    left: -80vw;
-    width: 200vw;
-    height: 120%;
+    top: 5rem;
+    left: -5vw;
+    width: 125rem;
+    height: 200%;
     transform: rotate(-7deg);
     z-index: -1;
 }
@@ -172,24 +168,18 @@ a {
     font-family: var(--fuente-titulo);
     font-size: 3rem;
     font-weight: normal;
-    color: var(--color-subtitulos);
-    width: fit-content;    
-    padding-top: 1.25rem;
-    padding-left: 0.625rem;
+    color: var(--color-subtitulos);  
+    padding-top: 7rem;
+    padding-left: 7.5rem;
 }
 
 
 .section-dos__imagenes {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     padding-right: 4.375rem;
-    gap: 9.375rem;
-}
-
-
-.section-dos__imagenes__imagen {
-    width: 100%;
-    height: auto;
+    gap: 4rem;
 }
 
 
@@ -199,6 +189,22 @@ a {
     padding-top: 1.875rem;
     justify-content: center;
     gap: 4.375rem;
+    width: 90rem;
+    position: relative;
+    overflow: hidden;
+    padding-top: 4.0625rem;
+}
+
+
+.section-tres::before {
+    content: "";
+    background-image: linear-gradient(to right, var(--color-secundario), var(--color-primario));
+    position: absolute;
+    top: -10rem;
+    width: 125rem;
+    height: 50%;
+    transform: rotate(-7deg);
+    z-index: -1;
 }
 
 
@@ -221,20 +227,21 @@ a {
 .section-tres__subtitulo__parrafo {
     font-family: var(--fuente-texto);
     font-size: 1rem;
-    width: 80%;
+    width: 100%;
 }
 
 
 .section-tres__imagen {
-    width: 28.6rem;
+    width: 25rem;
     height: 41.25rem;
 }
 
 
 .section-cuatro {
     display: flex;
-    flex-direction: column;   
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90rem;
 }
 
 
@@ -242,14 +249,14 @@ a {
     font-family: var(--fuente-titulo);
     font-size: 3rem;
     font-weight: normal;
-    padding: 90px 0 50px 300px;
-    padding: 5.625rem 0 3.125rem 18.75rem;
+    padding: 5rem 0 3rem 12rem;
 }
 
 
 .section-cuatro__imagenes {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
     height: auto;
 }
@@ -258,7 +265,6 @@ a {
 .section-cinco {
     display: flex;
     flex-direction: column;
-    /* align-items: left; */
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
@@ -268,16 +274,17 @@ a {
     font-family: var(--fuente-titulo);
     font-size: 3rem;
     font-weight: normal;
-    margin-bottom: 80px;
-    padding-left: 300px;
+    margin-bottom: 5rem;
+    padding-left: 20.625rem;
 }
 
 
 .section-cinco__temas {
     display: flex;
-    justify-content: space-between;
-    padding-left: 350px;
-    padding-right: 350px;
+    flex-direction: row;
+    padding-left: 21.875rem;
+    padding-right: 21.875rem;
+    gap: 3rem;
 }
 
 
@@ -289,19 +296,13 @@ a {
 }
 
 
-.section-cinco__temas__imagen {
-    width: 104px;
-    height: 104px;
-}
-
-
-.section-cinco__temas__parrafo {
+.section-cinco__temas__item__parrafo {
     font-family: var(--fuente-titulo);
     font-size: 1.5rem;
     font-weight: bold;
-    width: 220px;
+    width: 13.75rem;
     height: auto;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 
@@ -310,8 +311,11 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
-    margin-top: 200px;
+    padding-top: 12.5rem;
     position: relative;
+    height: auto;
+    overflow: hidden;
+    width: 90rem;
 }
 
 
@@ -319,10 +323,10 @@ a {
     content: "";
     background-image: linear-gradient(to right, var(--color-secundario), var(--color-primario));
     position: absolute;
-    top: -8.125rem;
+    top: 9rem;
     left: -80vw;
     width: 200vw;
-    height: 320%;
+    height: 100%;
     transform: rotate(-7deg);
     z-index: -1;
 }
@@ -332,7 +336,7 @@ a {
     font-family: var(--fuente-titulo);
     font-size: 3rem;
     font-weight: normal;
-    color: #FFFFFF;
+    color: white;
 }
 
 
@@ -346,6 +350,7 @@ a {
     height: 3.5rem;
     align-items: center;
     justify-content: center;
+    margin-bottom: 9.375rem;
 }
 
 
@@ -355,22 +360,32 @@ a {
 }
 
 
-.footer {
-    padding-top: 200px;
+.footer {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    z-index: 1;
+    background-color: #FFFFFF;
+    padding: 0 350px;
 }
 
 
+.footer__texto {
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    color: var(--color-texto)
+}
 
+
+.footer__logos {
+    display: flex;
+    gap: 2rem;
+}
 
 
 .footer__logos__logo {
-    width: 18px;
-    height: 28px;
+    width: 1.75rem;
+    height: 1.75rem;
 }
-
-
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 100px 16px 100px; */
 
