@@ -13,16 +13,20 @@
     --fuente-titulo: "IBM Plex Sans", sans-serif;
     --fuente-texto: "IBM Plex Mono", monospace;
     --fuente-enlace: "IBM Plex Mono-Medium", monospace;
+
+    --ancho-max-section: 90rem;
+    --ancho-mobile: 400px;
+    --tamaño-letra-mobile: 2.5rem;
+    --padding-mobile: 5%;
 }
 
-
+/* Reset CSS */
 *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
 
 
@@ -33,23 +37,24 @@ html {
 
 body {
     color: var(--color-texto);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
 a {
-    color: var(--color-texto);
+    color: var(--color-texto);    
+    text-decoration: none;
 }
 
 
+/* --- Header --- */
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 1.875rem 20rem 1.875rem 20rem;
+    padding: 1.875rem 20rem 0 20rem;
     font-family: var(--fuente-texto);
     font-size: 1rem;
-    word-spacing: 2rem;
-    width: 100%;
+    word-spacing: 3rem;
 }
 
 
@@ -75,7 +80,6 @@ a {
 
 .header__nav__link:active {
     color: var(--color-enlances-active);
-    text-decoration: line-through;
 }
 
 
@@ -83,28 +87,30 @@ a {
     background: none;
     border: none;
     display: none;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 
 .header__boton-hamburguesa__icono {
     width: 18px;
     height: auto;
-    display: block;
 }
 
 
+/* --- Main --- */
 .presentacion {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5% 5% 0 5%;
 }
 
 
+/* --- Sección 1 --- */
 .section-uno {
     display: flex;
     flex-direction: column;
-    width: 90rem;
+    width: var(--ancho-max-section);
     padding-left: 12.5rem;
 }
 
@@ -113,7 +119,6 @@ a {
     font-family: var(--fuente-titulo);
     font-size: 4rem;
     font-weight: normal;
-    color: var(--color-texto);
     margin-bottom: 1rem;
     padding-top: 3.75rem;
 }
@@ -138,21 +143,17 @@ a {
 }
 
 
-.section-uno__enlaces {
+.section-uno__enlaces__link {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 14.125rem;
     height: 3.5rem;
-}
-
-
-.section-uno__enlaces__link {
     font-family: var(--fuente-enlace);
     font-size: 1.125rem;
     font-weight: bold;
-    width: 14.125rem;
     background-color: var(--color-terciario);
-    align-content: center;
-    text-align: center;
+    
 }
 
 
@@ -162,8 +163,9 @@ a {
 }
 
 
+/* --- Sección 2 --- */
 .section-dos {    
-    width: 90rem;
+    width: var(--ancho-max-section);
     display: flex;
     flex-direction: column;
     gap: 4.5rem;
@@ -186,11 +188,18 @@ a {
     z-index: -1;
 }
 
-
-.section-dos__subtitulo {
+/* Apariencia general en subtítulos . */
+.section-dos__subtitulo,
+.section-tres__subtitulo,
+.section-cuatro__subtitulo,
+.section-cinco__subtitulo,
+.section-seis__subtitulo {
     font-family: var(--fuente-titulo);
     font-size: 3rem;
     font-weight: normal;
+}
+
+.section-dos__subtitulo {
     color: var(--color-subtitulos);  
     padding-top: 7rem;
     padding-left: 7.5rem;
@@ -200,7 +209,6 @@ a {
 .section-dos__imagenes {
     display: flex;
     justify-content: center;
-    flex-direction: row;
     padding-right: 4.375rem;
     gap: 4rem;
 }
@@ -212,6 +220,7 @@ a {
 }
 
 
+/* --- Sección 3 --- */
 .section-tres {
     display: flex;
     flex-direction: row-reverse;
@@ -246,17 +255,9 @@ a {
 }
 
 
-.section-tres__subtitulo {
-    font-family: var(--fuente-titulo);
-    font-size: 3rem;
-    font-weight: normal;
-}
-
-
 .section-tres__subtitulo__parrafo {
     font-family: var(--fuente-texto);
     font-size: 1rem;
-    width: 100%;
 }
 
 
@@ -266,53 +267,46 @@ a {
 }
 
 
+/* --- Sección 4 --- */
 .section-cuatro {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 90rem;
+    width: var(--ancho-max-section)
 }
 
 
 .section-cuatro__subtitulo {
-    font-family: var(--fuente-titulo);
-    font-size: 3rem;
-    font-weight: normal;
     padding: 5rem 0 3rem 12rem;
 }
 
 
 .section-cuatro__imagenes {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     width: 100%;
-    height: auto;
 }
 
 
+/* --- Sección 5 --- */
 .section-cinco {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    width: var(--ancho-max-section);
 }
 
 
 .section-cinco__subtitulo {
-    font-family: var(--fuente-titulo);
-    font-size: 3rem;
-    font-weight: normal;
     margin-bottom: 5rem;
-    padding-left: 20.625rem;
+    padding-right: 30rem;
 }
 
 
 .section-cinco__temas {
     display: flex;
-    flex-direction: row;
-    padding-left: 21.875rem;
-    padding-right: 21.875rem;
+    padding: 0 21.875rem;
     gap: 3rem;
 }
 
@@ -330,11 +324,11 @@ a {
     font-size: 1.5rem;
     font-weight: bold;
     width: 13.75rem;
-    height: auto;
     margin-top: 1.25rem;
 }
 
 
+/* --- Sección 6 --- */
 .section-seis {
     display: flex;
     flex-direction: column;
@@ -342,9 +336,8 @@ a {
     gap: 2.5rem;
     padding-top: 12.5rem;
     position: relative;
-    height: auto;
     overflow: hidden;
-    width: 90rem;
+    width: var(--ancho-max-section);
 }
 
 
@@ -362,10 +355,7 @@ a {
 
 
 .section-seis__subtitulo {
-    font-family: var(--fuente-titulo);
-    font-size: 3rem;
-    font-weight: normal;
-    color: white;
+    color: var(--color-subtitulos);
 }
 
 
@@ -389,21 +379,18 @@ a {
 }
 
 
+/* --- Footer --- */
 .footer {    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
-    z-index: 1;
-    background-color: #FFFFFF;
-    padding: 0 350px;
+    padding: 1.875rem 21.875rem;
 }
 
 
 .footer__texto {
     font-family: var(--fuente-texto);
     font-size: 1rem;
-    color: var(--color-texto)
 }
 
 
@@ -418,11 +405,12 @@ a {
     height: 1.75rem;
 }
 
+/* ###################################################################################################################### */
+/* ###################################################################################################################### */
 
-
-
+/* --- Media Queries --- */
 @media (max-width: 1210px) {
-
+    /* --- Header --- */
     .header {
         padding: 5%;
         justify-content: center;
@@ -439,15 +427,34 @@ a {
     .header__boton-hamburguesa__icono {
         
     }
+    
+    .header,
+    .presentacion,
+    .section-uno,
+    .section-dos,
+    .section-tres,
+    .section-cuatro,
+    .section-cinco,
+    .section-seis,
+    .footer {
+        width: var(--ancho-mobile);
+    }
+
+    .section-uno__titulo,
+    .section-dos__subtitulo,
+    .section-tres__subtitulo,
+    .section-cuatro__subtitulo,
+    .section-cinco__subtitulo,
+    .section-seis__subtitulo {
+        font-size: var(--tamaño-letra-mobile);
+    }
 
     .section-uno {
-        width: auto;
         padding: 5%;
     }
 
     .section-uno__titulo {
-        width: auto;
-        font-size: 3rem;
+
     }
 
     .section-uno__texto {
@@ -455,9 +462,7 @@ a {
     }
 
     .section-uno__enlaces {
-        justify-content: center;
-        padding-left: 0;
-        width: auto;
+        
     }
 
     .section-uno__enlaces__link {
@@ -465,13 +470,17 @@ a {
     }
 
     .section-dos {
-        width: auto;
+        gap: 1rem;
+        padding: 3rem
     }
 
-    .section-dos__subtitulo {
-        text-align: center;
-        font-size: 2rem;
+    .section-dos::before {
+        top: -3rem;        
+    }
+
+    .section-dos__subtitulo {        
         padding: 0;
+        padding-top: 3rem;
     }
 
     .section-dos__imagenes {
@@ -482,12 +491,17 @@ a {
     .section-dos__imagenes__imagen {
         width: 18.625rem;
         height: 14.0625rem;
+        margin: 0 auto;
     }
 
     .section-tres {
         flex-direction: column-reverse;
         align-items: center;
-        width: auto;
+        gap: 2rem;
+    }
+
+    .section-tres::before {
+        top: -22rem;
     }
 
     .section-tres__texto {
@@ -495,7 +509,7 @@ a {
     }
 
     .section-tres__subtitulo {
-        font-size: 3rem;
+        
     }
 
     .section-tres__subtitulo__parrafo {
@@ -503,26 +517,31 @@ a {
     }
 
     .section-cuatro {
-        width: auto;
+        
     }
 
     .section-cuatro__subtitulo {
-        align-items: center;
+        padding: 0;
+        padding: 3rem 2rem 1rem 2rem;
     }
 
     .section-cuatro__imagenes {
         flex-direction: column;
-        width: auto;
-        height: auto;
+        
     }
 
     .section-cinco {
-        width: auto;
+        
+    }
+
+    .section-cinco__subtitulo {
+        padding: 0 3rem 2.5rem 2rem;
+        margin: 0;
     }
 
 
     .section-seis {
-        width: auto;
+        
     }
 
     .section-seis__subtitulo {
@@ -534,7 +553,6 @@ a {
     }
 
     .footer {
-        width: auto;
         flex-direction: column;
         justify-content: center;
     }
